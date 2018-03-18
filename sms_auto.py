@@ -5,7 +5,7 @@ import csv
 # Establish a secure session with gmail's outgoing SMTP server using your gmail account
 server = smtplib.SMTP( "smtp.gmail.com", 587 )
 server.starttls()
-server.login( 'caputo.philip@gmail.com', 'seryne2012' )
+server.login( '<gmail_email@gmail.com>', '<password>' )
 
 # Send text message through SMS gateway of destination number
 message = 'Affordable life insurance to protect your family!\nwww.ineedlifeinsuarancenow.com'
@@ -21,7 +21,7 @@ carrierList = {1:'txt.att.net',
                9:'vmobl.com'}
 
 #open leadList file
-with open('/home/capphil1/Documents/r_list_office@bitcoinpaper.money_1520866665.csv', 'rb') as leadFile:
+with open('/home/<path/tofile>.csv', 'rb') as leadFile:
 	reader = csv.reader(leadFile)
 
 #iterate through each & every row and send sms text to every number
