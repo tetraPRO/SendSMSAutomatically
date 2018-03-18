@@ -28,8 +28,8 @@ with open('/home/<path/tofile>.csv', 'rb') as leadFile:
 #trying every carrier option as we do not know which carrier the number
 #belongs to.  Takes about 5 or 6 seconds for every number.
 	for row in reader:
-            print(row[1])
+            print(row[1])#debugging...can be removed
             for carrier in carrierList:
                 number = str(row[1]) + '@' + str(carrierList[carrier])
                 server.sendmail('Philip', number, message)
-                print number
+                print number#debugging...can be removed
